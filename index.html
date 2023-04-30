@@ -9,6 +9,7 @@
     <p>Click the button below to check the current wind speed at your location:</p>
     <button onclick="getLocation()">Get Wind Speed</button>
     <p id="windSpeed"></p>
+    <p id="windDirection"></p>
     <script>
       function getLocation() {
         if (navigator.geolocation) {
@@ -30,6 +31,10 @@
             const windSpeed = data.wind.speed;
             const windSpeedElement = document.getElementById("windSpeed");
             windSpeedElement.innerHTML = `The current wind speed at your location is ${windSpeed} meters per second. Good luck with sailing.`;
+
+            const windDirection = data.wind.deg;
+            const windDirectionElement = document.getElementById("windDirection");
+            windDirectionElement.innerHTML = `The wind direction at your location is ${windDirection} degrees.`;
           })
           .catch(error => {
             alert("There was an error fetching the weather data.");
