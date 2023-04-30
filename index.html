@@ -36,39 +36,39 @@
             const windDirectionElement = document.getElementById("windDirection");
             //Change wind direction to cardinal direction   
             if (windDirection > 348.75 || windDirection < 11.25) {
-              windDirection = "North";
+              windDirection2 = "North";
             } else if (windDirection > 11.25 && windDirection < 33.75) {
-              windDirection = "North North East";
+              windDirection2 = "North North East";
             } else if (windDirection > 33.75 && windDirection < 56.25) {
-              windDirection = "North East";
+              windDirection2 = "North East";
             } else if (windDirection > 56.25 && windDirection < 78.75) {
-              windDirection = "East North East";
+              windDirection2 = "East North East";
             } else if (windDirection > 78.75 && windDirection < 101.25) {
-              windDirection = "East";
+              windDirection2 = "East";
             } else if (windDirection > 101.25 && windDirection < 123.75) {
-              windDirection = "East South East";
+              windDirection2 = "East South East";
             } else if (windDirection > 123.75 && windDirection < 146.25) {
-              windDirection = "South East";
+              windDirection2 = "South East";
             } else if (windDirection > 146.25 && windDirection < 168.75) {
-              windDirection = "South South East";
+              windDirection2 = "South South East";
             } else if (windDirection > 168.75 && windDirection < 191.25) {
-              windDirection = "South";
+              windDirection2 = "South";
             } else if (windDirection > 191.25 && windDirection < 213.75) {
-              windDirection = "South South West";
+              windDirection2 = "South South West";
             } else if (windDirection > 213.75 && windDirection < 236.25) {
-              windDirection = "South West";
+              windDirection2 = "South West";
             } else if (windDirection > 236.25 && windDirection < 258.75) {
-              windDirection = "West South West";
+              windDirection2 = "West South West";
             } else if (windDirection > 258.75 && windDirection < 281.25) {
-              windDirection = "West";
+              windDirection2 = "West";
             } else if (windDirection > 281.25 && windDirection < 303.75) {
-              windDirection = "West North West";
+              windDirection2 = "West North West";
             } else if (windDirection > 303.75 && windDirection < 326.25) {
-              windDirection = "North West";
+              windDirection2 = "North West";
             } else if (windDirection > 326.25 && windDirection < 348.75) {
-              windDirection = "North North West";
+              windDirection2 = "North North West";
             } else {
-              windDirection = "Unknown";
+              windDirection2 = "Unknown";
             }
             windDirectionElement.innerHTML = `The wind direction at your location is ${windDirection} degrees.`;
           })
