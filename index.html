@@ -71,6 +71,7 @@
               windDirection2 = "Unknown";
             }
             windDirectionElement.innerHTML = `The wind direction at your location is ${windDirection} degrees.`;
+            windDirectionElement.innerHTML = `The wind direction at your location is nekaj degrees.`;
           })
           .catch(error => {
             alert("There was an error fetching the weather data.");
