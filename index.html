@@ -34,7 +34,8 @@
 
             const windDirection = data.wind.deg;
             const windDirectionElement = document.getElementById("windDirection");
-            windDirectionElement.innerHTML = `The wind direction at your location is ${windDirection} degrees.`;
+            windDirectionElement.innerHTML = `The current wind direction at your location is ${getWindDirection(windDirection)}.`;
+            
           })
           .catch(error => {
             alert("There was an error fetching the weather data.");
