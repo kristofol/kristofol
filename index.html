@@ -10,7 +10,7 @@
     <button onclick="getLocation()">Get Wind Speed</button>
     <p id="windSpeed"></p>
     <p id="windDirection"></p>
-    <p id="windDirection2"></p>
+    
     <script>
       function getLocation() {
         if (navigator.geolocation) {
@@ -71,9 +71,9 @@
             } else {
               windDirection2 = "Unknown";
             }
-            const windDirectionElement2 = document.getElementById("windDirection2");
+            
             windDirectionElement.innerHTML = `The wind direction at your location is ${windDirection} degrees.`;
-            windDirectionElement2.innerHTML = `The wind direction at your location is ${windDirection2} degrees.`;
+            
           })
           .catch(error => {
             alert("There was an error fetching the weather data.");
