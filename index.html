@@ -30,14 +30,14 @@
           alert("Geolocation is not supported by this browser.");
         }
       }
-      <div id="satelliteImage"></div>
+      
 
       function showPosition(position) {
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
         const apiKey = "992c0dc1d95bb6d83e726266403d3b77";
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-        const satelliteUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lon}&zoom=14&size=400x400&maptype=satellite&key=AIzaSyDbf9beKDBeKigShIJV9qIarolFsqLtWLQ`;
+        
 
 
         fetch(apiUrl)
@@ -45,10 +45,7 @@
           .then(data => {
             const windSpeed = data.wind.speed;
             const windSpeedElement = document.getElementById("windSpeed");
-            windSpeedElement.innerHTML = `The current wind speed at your location is ${windSpeed} meters per second. Good luck with sailing.
-            <br>
-            <img src="${satelliteUrl}" alt="Satellite Image">
-            `;
+            windSpeedElement.innerHTML = `The current wind speed at your location is ${windSpeed} meters per second. Good luck with sailing.`;
             
             const temperature = data.main.temp;
             const temperatureElement = document.getElementById("temperature");
