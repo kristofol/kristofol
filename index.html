@@ -9,10 +9,14 @@
       /* background-color: #de1919; /* Replace with your desired background color */
       background-image: url("https://as1.ftcdn.net/v2/jpg/05/15/29/08/1000_F_515290841_f8p1zZgcTKgNDGRYGGEgNBbMcbZeuDwL.jpg"); /* Replace with the path to your image file */
     }
+    .larger-button {
+      font-size: 20px;
+      padding: 10px 20px;
   </style>
   <body>
     <h1>Kristof Wind Speed Checker version 2</h1>
     <p>Click the button below to check the current wind speed at your location:</p>
+    <button class="larger-button" onclick="getLocation()">Get Wind Speed</button>
     <button onclick="getLocation()">Get Wind Speed</button>
     <p id="windSpeed"></p>
     <p id="windDirection"></p>
